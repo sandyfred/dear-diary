@@ -1,0 +1,10 @@
+<%- include('partials/headerUser'); -%>
+<h1>Hit Compose to write about your day!</h1>
+<% posts.forEach( post => { %>
+<h2><%=post.title%></h2>
+<p>
+  <%= post.content.substring(0,100) + "..." %>
+  <a href="/posts/<%=post.title%>">Read More</a>
+</p>
+<% }); %>
+<%- include('partials/footer'); -%>
